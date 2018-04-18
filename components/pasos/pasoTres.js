@@ -270,7 +270,7 @@ this.setState(previousState => {
 
            <View style={styles.containerTres}>
              <TouchableHighlight>
-               <Text style={styles.buttonText} onPress={() => navigate('Muestra',{user:'Muestra'})}>Volver a las Muestras</Text>
+               <Text style={styles.buttonText} onPress={() => navigate('DrawerMuestra',{user:'DrawerMuestra'})}>Volver a las Muestras</Text>
              </TouchableHighlight>
              </View>
         </View>

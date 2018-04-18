@@ -11,9 +11,11 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 import React from 'react';
 import { Constants} from 'expo';
 import DrawerScreen from './drawerScreen';
+import DrawerMuestra from './drawerMuestra';
 
 const DrawerNavigation = StackNavigator({
-    DrawerStack: {screen: DrawerScreen}
+    DrawerStack: {screen: DrawerScreen},
+    DrawerMuestra: {screen: DrawerMuestra}
 }, {
     headerMode: 'none',
     navigationOptions: ({navigation}) => ({

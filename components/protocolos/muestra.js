@@ -12,7 +12,7 @@ import Helpers from '../../lib/helpers.js';
 
 const { width, height } = Dimensions.get('window')
 
-export default class protocolos extends Component {
+export default class Muestra extends Component {
 
 
 

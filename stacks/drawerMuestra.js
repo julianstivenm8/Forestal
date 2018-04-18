@@ -7,18 +7,11 @@ import PasoDos from '../components/pasos/pasoDos.js';
 import PasoTres from '../components/pasos/pasoTres.js';
 
 
-const DrawerScreen = DrawerNavigator({
-    Protocolos: {screen: Protocolos},
-    Muestra: {screen: Muestra},
-}, {
-    headerMode: 'none',
-})
-
-export const DrawerMuestra = DrawerNavigator({
+ const DrawerMuestra = DrawerNavigator({
   Muestra: {screen: Muestra},
     Protocolos: {screen: Protocolos},
 }, {
     headerMode: 'none',
 })
 
-export default DrawerScreen;
+export default DrawerMuestra;
