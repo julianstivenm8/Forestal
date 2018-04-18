@@ -194,7 +194,7 @@ async componentWillMount(){
                 this.state.namesOld.map((item,subItem, index) => (
 
 
-                  <TouchableOpacity key = {item.id}  style = {styles.item} onPress={() => navigate('PasoUno',{user:'PasoUno'})}>
+                  <TouchableOpacity key = {item.id}  style = {styles.item} >
                     <View  style = {styles.itemTres}>
                       <View  style = {styles.itemDos}>
                         <Text style={styles.textGrayB} >{item.fecha}</Text>
@@ -203,7 +203,7 @@ async componentWillMount(){
                         <Text style={styles.buttonText}>In</Text>
 
                       </TouchableHighlight> */}
-                        <MaterialCommunityIcons    name="chart-bar" size={32} color="#606060" />
+                        <MaterialCommunityIcons  onPress={() => navigate('Revision',{user:'Revision'})}  name="chart-bar" size={32} color="#606060" />
                     </View>
                     <View  style = {styles.progress}>
                       <Progress.Bar progress={this.state.pesoPorcentaje/100} width={320} height={5} unfilledColor={'#EAEAEA'} color={'#D8940F'} borderWidth={0.2} borderColor={'#EAEAEA'} borderRadius={2}  />
@@ -214,7 +214,7 @@ async componentWillMount(){
                 ))
               }
             </ScrollView>
-            <View   style = {styles.itemDos}>
+            <View   style = {styles.itemTitle}>
               <Text style={styles.textGrayB} >Actuales</Text>
             </View>
             <ScrollView>
@@ -343,7 +343,19 @@ const styles = StyleSheet.create({
 
   },
   itemDos: {
+    paddingLeft:17,
+  paddingTop:10,
+  },
+  itemTitle: {
+    paddingLeft:17,
+paddingTop:5,
+marginTop:10,
 
+
+borderTopColor: '#bbb',
+    borderTopWidth: 1,
+
+// linereight: 40,
   },
   itemTres: {
     flexDirection: 'row',
@@ -360,8 +372,6 @@ const styles = StyleSheet.create({
   containerText: {
     flex: 2,
     backgroundColor:'#FFFFFF',
-    alignItems: 'center',
-    justifyContent: 'center',
     //paddingVertical:10,
     borderWidth:30,
     borderColor:'#FFFFFF',
@@ -380,7 +390,6 @@ const styles = StyleSheet.create({
     textAlign: 'left'
   },
   container: {
-    flex: 1,
     backgroundColor: '#FFFFFF'
   },
   imgBackground: {

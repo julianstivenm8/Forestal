@@ -16,6 +16,7 @@ import Muestra from './components/protocolos/muestra.js';
 import PasoUno from './components/pasos/pasoUno.js';
 import PasoDos from './components/pasos/pasoDos.js';
 import PasoTres from './components/pasos/pasoTres.js';
+import Revision from './components/pasos/revision.js';
 import DrawerStack from './stacks/drawerStack.js';
 import HerramientaAforos from './components/herramientaAforos/herramientaAforos.js';
 
@@ -100,10 +101,11 @@ export const Navigator = StackNavigator({
     PasoUno: {screen:PasoUno},
     PasoDos: {screen:PasoDos},
     PasoTres:{screen:PasoTres},
+    Revision:{screen:Revision},
     HerramientaAforos:{screen:HerramientaAforos}
 }, {
    //headerMode: 'none',
-    initialRouteName: 'Muestra'
+    initialRouteName: 'Home'
 })
 
 

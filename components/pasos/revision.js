@@ -8,7 +8,7 @@ import { Constants} from 'expo';
 import Helpers from '../../lib/helpers.js'
 import PasoUno from './pasoUno'
 
-export default class PasoTres extends React.Component {
+export default class Revision extends React.Component {
   static navigationOptions = ({ navigation }) => {
        return {
           headerStyle: { marginTop: Constants.statusBarHeight },
@@ -270,7 +270,7 @@ this.setState(previousState => {
 
            <View style={styles.containerTres}>
              <TouchableHighlight>
-               <Text style={styles.buttonText} onPress={() => navigate('Muestra',{user:'Muestra'})}>Volver a las Muestras</Text>
+               <Text style={styles.buttonText} onPress={() => navigate('PasoUno',{user:'PasoUno'})}>Modificar protocolo</Text>
              </TouchableHighlight>
              </View>
         </View>
