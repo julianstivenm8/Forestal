@@ -12,10 +12,12 @@ import React from 'react';
 import { Constants} from 'expo';
 import DrawerScreen from './drawerScreen';
 import DrawerMuestra from './drawerMuestra';
+import DrawerInformacionBasica from './drawerInformacionBasica';
 
 const DrawerNavigation = StackNavigator({
     DrawerStack: {screen: DrawerScreen},
-    DrawerMuestra: {screen: DrawerMuestra}
+    DrawerMuestra: {screen: DrawerMuestra},
+    DrawerInformacionBasica: {screen: DrawerInformacionBasica},
 }, {
     headerMode: 'none',
     navigationOptions: ({navigation}) => ({

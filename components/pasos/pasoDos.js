@@ -81,9 +81,10 @@ export default class PasoDos extends React.Component {
   }
   restarAlto(){
     try{
-        if (this.state.activar) {
+        if ( this.state.alto >=1) {
     this.setState({alto:this.state.alto - 1});
     this.setState({suma:this.state.suma - 1});
+    this.setState({activar:true});
   }
   }catch(error){
     console.log(error)
@@ -101,9 +102,10 @@ export default class PasoDos extends React.Component {
   }
   restarMedio(){
     try{
-        if (this.state.activar) {
+        if (this.state.medio >=1) {
     this.setState({medio:this.state.medio - 1});
     this.setState({suma:this.state.suma - 1});
+      this.setState({activar:true});
   }
   }catch(error){
     console.log(error)
@@ -111,7 +113,7 @@ export default class PasoDos extends React.Component {
   }
   adicionarBajo(){
     try{
-        if (this.state.activar) {
+        if (this.state.activar ) {
     this.setState({bajo:this.state.bajo + 1});
     this.setState({suma:this.state.suma + 1});
   }
@@ -121,9 +123,10 @@ export default class PasoDos extends React.Component {
   }
   restarBajo(){
     try{
-        if (this.state.activar) {
+        if (this.state.bajo >=1) {
     this.setState({bajo:this.state.bajo - 1});
     this.setState({suma:this.state.suma - 1});
+      this.setState({activar:true});
   }
   }catch(error){
     console.log(error)
@@ -145,8 +148,7 @@ export default class PasoDos extends React.Component {
       </TouchableHighlight>
     }
     return <TouchableHighlight>
-      <Text style={styles.buttonText}
-          onPress={this.saveForm.bind(this)}>
+      <Text style={styles.buttonText}>
         {this.state.suma}/25</Text>
     </TouchableHighlight>
   }

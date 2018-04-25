@@ -1,15 +1,14 @@
 import {DrawerNavigator} from 'react-navigation';
-
 import Protocolos from '../components/protocolos/protocolos.js';
 import Muestra from '../components/protocolos/muestra.js';
-import PasoUno from '../components/pasos/pasoUno.js';
-import PasoDos from '../components/pasos/pasoDos.js';
-import PasoTres from '../components/pasos/pasoTres.js';
-
+import InformacionBasica from '../components/informacionBasica/informacionBasica.js';
+import InventarioAnimal from '../components/informacionBasica/inventarioAnimal.js';
 
  const DrawerMuestra = DrawerNavigator({
-  Muestra: {screen: Muestra},
-    Protocolos: {screen: Protocolos},
+   Muestra: {screen: Muestra},
+   Protocolos: {screen: Protocolos},
+   InformacionBasica: {screen: InformacionBasica},
+   InventarioAnimal:{screen: InventarioAnimal},
 }, {
     headerMode: 'none',
 })

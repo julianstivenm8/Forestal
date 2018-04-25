@@ -12,23 +12,7 @@ const { width, height } = Dimensions.get('window')
 
 export default class protocolos extends Component {
 
-/*  static navigationOptions = ({ navigation }) => {
-      const {state, setParams,navigate} = navigation;
-    //  const isInfo = state.params.mode === 'info';
-    //  const {user} = state.params;
 
-  //  const { navigate } = navigation;
-      return {
-
-       title: 'Protocolos activos',
-         headerStyle: { marginTop: Constants.statusBarHeight },
-        headerLeft: <MaterialCommunityIcons  onPress={() => navigate('DrawerOpen')} name="menu" size={32} color="#606060" />,
-        headerRight:(
-        <MaterialCommunityIcons    onPress={() => navigate('Chat',{user:'madrid'})} name="calendar-range" size={32} color="#606060" />
-      ),
-      drawerLabel:'protocolos'
-      };
-  };*/
   //Del componente ScrollView
    state = {
      pesoPorcentaje:0,
@@ -83,20 +67,6 @@ export default class protocolos extends Component {
                  ))
               }
            </ScrollView>
-
-
-        {/*
-          <TouchableHighlight>
-            <Text style={styles.buttonText} onPress={() => navigate('Index',{user:'Index'})}>Ver mis protocolos</Text>
-          </TouchableHighlight>
-           <View style={styles.slide}>
-          <View style={styles.containerText}>
-              <Text style={styles.textRed}>Administre sus predios</Text>
-              <Text style={styles.textGray}>No dejes para mañana lo que puedes hacer hoy. Realiza todas las tareas que requiere su sistema silvopastoril.</Text>
-              <Text style={styles.textGray}>!Alcance la mayor productividad¡</Text>
-          </View>
-        </View>*/}
-
           </View>
 
     )

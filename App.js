@@ -19,6 +19,7 @@ import PasoTres from './components/pasos/pasoTres.js';
 import Revision from './components/pasos/revision.js';
 import DrawerStack from './stacks/drawerStack.js';
 import HerramientaAforos from './components/herramientaAforos/herramientaAforos.js';
+import InformacionBasica from './components/informacionBasica/informacionBasica.js';
 
 class HomeScreen extends React.Component  {
 
@@ -95,6 +96,7 @@ export const Navigator = StackNavigator({
     Index: { screen: Index },
     Login: { screen: Login },
     Registro: { screen: Registro },
+    InformacionBasica: { screen: InformacionBasica },
     Slide: { screen: Slide },
     Protocolos: { screen: Protocolos },
     Muestra: {screen:Muestra},

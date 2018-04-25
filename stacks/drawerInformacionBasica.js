@@ -5,13 +5,12 @@ import Muestra from '../components/protocolos/muestra.js';
 import InformacionBasica from '../components/informacionBasica/informacionBasica.js';
 import InventarioAnimal from '../components/informacionBasica/inventarioAnimal.js';
 
-const DrawerScreen = DrawerNavigator({
-    Protocolos: {screen: Protocolos},
-    InformacionBasica: {screen: InformacionBasica},
-    InventarioAnimal:{screen: InventarioAnimal},
-
+ const DrawerInformacionBasica = DrawerNavigator({
+  InformacionBasica: {screen: InformacionBasica},
+  Protocolos: {screen: Protocolos},
+  InventarioAnimal:{screen: InventarioAnimal},
 }, {
     headerMode: 'none',
 })
 
-export default DrawerScreen;
+export default DrawerInformacionBasica;
