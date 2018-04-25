@@ -5,6 +5,7 @@ import Muestra from '../components/protocolos/muestra.js';
 import InformacionBasica from '../components/informacionBasica/informacionBasica.js';
 import InventarioAnimal from '../components/informacionBasica/inventarioAnimal.js';
 
+
  const DrawerInformacionBasica = DrawerNavigator({
   InformacionBasica: {screen: InformacionBasica},
   Protocolos: {screen: Protocolos},

@@ -2,9 +2,17 @@ import React, {Component} from 'react'
 import {  StyleSheet, Text, View ,Image, TextInput,TouchableHighlight,ScrollView} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { Constants} from 'expo';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as firebase from 'firebase';
 
 export default class InventarioAnimal extends Component {
+  static navigationOptions = {
+      drawerLabel: 'Configurar Inventario animal',
+      drawerIcon: () => (
+        <MaterialCommunityIcons  style={styles.icon}  name="cow" size={25} color="#606060" />
+
+      )
+    };
   render() {
     const { navigate } = this.props.navigation;
     return(

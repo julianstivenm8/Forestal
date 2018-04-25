@@ -11,6 +11,7 @@ import InventarioAnimal from '../components/informacionBasica/inventarioAnimal.j
    InventarioAnimal:{screen: InventarioAnimal},
 }, {
     headerMode: 'none',
+  
 })
 
 export default DrawerMuestra;

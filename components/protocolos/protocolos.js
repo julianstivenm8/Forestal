@@ -11,7 +11,13 @@ const { width, height } = Dimensions.get('window')
 
 
 export default class protocolos extends Component {
+  static navigationOptions = {
+      drawerLabel: 'Protocolos',
+      drawerIcon: () => (
+        <MaterialCommunityIcons  style={styles.icon}  name="file-multiple" size={25} color="#606060" />
 
+      )
+    };
 
   //Del componente ScrollView
    state = {
@@ -52,7 +58,7 @@ export default class protocolos extends Component {
               {
                  this.state.names.map((item,subItem, index) => (
 
-               <TouchableOpacity key = {item.id}  style = {styles.item} onPress={() => navigate('Muestra',{user:'Muestra'})}>
+               <TouchableOpacity key = {item.id}  style = {styles.item} onPress={() => navigate('DrawerHistorial',{user:'DrawerHistorial'})}>
 
                       <View  style = {styles.itemDos}>
                         <Text style={styles.textGrayB} >{item.name}</Text>

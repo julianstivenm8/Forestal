@@ -12,11 +12,11 @@ import Helpers from '../../lib/helpers.js';
 
 const { width, height } = Dimensions.get('window')
 
-export default class Muestra extends Component {
+export default class Historial extends Component {
   static navigationOptions = {
-      drawerLabel: 'Muestra',
+      drawerLabel: 'Historial',
       drawerIcon: () => (
-        <MaterialCommunityIcons  style={styles.icon}  name="leaf" size={25} color="#606060" />
+        <MaterialCommunityIcons  style={styles.icon}  name="history" size={25} color="#606060" />
 
       )
     };
@@ -27,14 +27,26 @@ export default class Muestra extends Component {
   }
   //Del componente ScrollView
   state = {
+
+
+
     pesoBajo:0,
     pesoMedio:0,
     pesoPorcentaje:0,
+    namesOld: [
+      {'name': 'Muestra de Botón de oro','porcentaje':100, 'id': 1, 'fecha':'Mayo 21 de 2018'},
+      {'name': 'Muestra de Botón de oro','porcentaje':100, 'id': 2, 'fecha':'Junio 18 de 2018'},
+      {'name': 'Muestra de Botón de oro','porcentaje':100, 'id': 3, 'fecha':'Julio 16 de 2018'},
+      // {'name': 'Muestra de Sinaí','porcentaje':100, 'id': 2}
+    ],
     names: [
-      {'name': 'Muestra de Botón de oro','porcentaje':100, 'id': 1},
-      {'name': 'Muestra de Sinaí','porcentaje':100, 'id': 2},
+      {'name': 'Muestra de Botón de oro','porcentaje':0, 'id': 1, 'fecha':'Abril 23 de 2018'},
+
+      // {'name': 'Muestra de Sinaí','porcentaje':100, 'id': 2}
     ]
   };
+  //   var progressBar = require('ProgressBarAndroid');
+
   async componentWillMount(){
     try {
       let user = await firebase.auth().currentUser;
@@ -158,14 +170,14 @@ export default class Muestra extends Component {
             <View style={styles.container}>
               <StatusBar  hidden = {false} />
 
-              <ScrollView >
-<View  style = {styles.scrollView}>
+              <ScrollView>
+
                 {
                   this.state.names.map((item,subItem, index) => (
-                    <TouchableOpacity key = {item.id}  style = {styles.item} onPress={() => navigate('PasoUno',{user:'PasoUno'})}>
+                    <TouchableOpacity key = {item.id}  style = {styles.item} onPress={() => navigate('Muestra',{user:'Muestra'})}>
                       <View  style = {styles.itemTres}>
                         <View  style = {styles.itemDos}>
-                          <Text style={styles.textGrayB} >{item.name}</Text>
+                          <Text style={styles.textGrayB} >{item.fecha}</Text>
                         </View>
                         <View style = {styles.itemEnd}>
                           <Text style={styles.textPorcentaje}>{this.state.pesoPorcentaje}%</Text>
@@ -177,14 +189,28 @@ export default class Muestra extends Component {
                     </TouchableOpacity>
                   ))
                 }
+              <View   style = {styles.itemTitle}>
+                <MaterialCommunityIcons   name="checkbox-marked-circle" size={18} color="#606060" />
+                <Text style={styles.textGraySub} >Tareas finalizadas</Text>
+              </View>
+                {
+                  this.state.namesOld.map((item,subItem, index) => (
 
-                <TouchableHighlight>
-                  <Text style={styles.buttonText} >Enviar protocolo</Text>
-                </TouchableHighlight>
-                <TouchableHighlight>
-                  <Text style={styles.buttonText} >Ver resultantes</Text>
-                </TouchableHighlight>
-                  </View>
+
+                    <TouchableOpacity key = {item.id}  style = {styles.itemWhite} onPress={() => navigate('Revision',{user:'Revision'})} >
+                      <View  style = {styles.itemTres}>
+                        <View  style = {styles.itemDos}>
+                          <Text style={styles.textGrayBWhite} >{item.fecha}</Text>
+                        </View>
+                        <MaterialCommunityIcons    name="eye" size={30} color="#606060" />
+                      </View>
+                      <View  style = {styles.progress}>
+                        <Progress.Bar progress={this.state.pesoPorcentaje/100} width={280} height={5} unfilledColor={'#EAEAEA'} color={'#b2d197'} borderWidth={0.2} borderColor={'#EAEAEA'} borderRadius={2}  />
+                      </View>
+                    </TouchableOpacity>
+
+                  ))
+                }
               </ScrollView>
 
             </View>
@@ -206,14 +232,14 @@ export default class Muestra extends Component {
         },
         buttonText:{
           fontSize:20,
-          backgroundColor:'#d6aaaa',
+          backgroundColor:'#A51414',
           color:'#ffff',
-          padding: 17,
-          width:'90%',
-          marginTop:17,
+          //marginVertical:0,
+          width:50,
           borderRadius:6,
           textAlign:'center',
           paddingVertical:9,
+          marginBottom:20,
         },
         slide: {
           flex: 1,
@@ -344,8 +370,4 @@ export default class Muestra extends Component {
           marginTop:33
 
         },
-        scrollView:{
-          flex:1,
-          alignItems:'center'
-        }
       });

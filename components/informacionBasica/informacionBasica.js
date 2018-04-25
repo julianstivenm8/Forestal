@@ -2,12 +2,19 @@ import React, {Component} from 'react'
 import {  StyleSheet, Text, View ,Image, TextInput,TouchableHighlight} from 'react-native';
 import { StackNavigator } from 'react-navigation';
 import { Constants} from 'expo';
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 import * as firebase from 'firebase';
 
 
 
 export default class InformacionBasica extends Component {
+  static navigationOptions = {
+      drawerLabel: 'Configurar predio',
+      drawerIcon: () => (
+        <MaterialCommunityIcons  style={styles.icon}  name="settings" size={25} color="#606060" />
 
+      )
+    };
   constructor(props){
     super(props);
     this.state = {email:'', password:'', error:'', loading:false};

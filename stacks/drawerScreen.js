@@ -12,6 +12,7 @@ const DrawerScreen = DrawerNavigator({
 
 }, {
     headerMode: 'none',
+    
 })
 
 export default DrawerScreen;
