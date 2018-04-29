@@ -107,7 +107,7 @@ export const Navigator = StackNavigator({
     HerramientaAforos:{screen:HerramientaAforos}
 }, {
    //headerMode: 'none',
-    initialRouteName: 'Slide'
+    initialRouteName: 'Home'
 })
 
 

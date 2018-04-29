@@ -18,6 +18,11 @@ export default class registro extends Component {
     headerStyle: { marginTop: Constants.statusBarHeight },
   };
 
+singUpGoogle(){
+var id_token = googleUser.getAuthResponse().id_token;
+console.log(id_token);
+}
+
   onSignUpPress(){
     this.setState({error:'', loading:true});
 
@@ -28,7 +33,7 @@ export default class registro extends Component {
       this.props.navigation.navigate('Slide');
     })
     .catch(()=>{
-      this.setState({error:'Las contraseñas no concuerdan',loading:false});
+      this.setState({error:'Llena todos los espacios',loading:false});
     })
   }
   renderButtonOrLoading(){
@@ -41,6 +46,14 @@ export default class registro extends Component {
       </TouchableHighlight>
     </View>
   }
+  renderButtonOrLoadingGoogle(){
+
+    return <View>
+      <TouchableHighlight>
+        <Text style={styles.buttonText}   onPress={this.singUpGoogle.bind(this)} >INGRESAR CON GOOGLE</Text>
+      </TouchableHighlight>
+    </View>
+  }
   render() {
       const { navigate } = this.props.navigation;
     return(
@@ -50,9 +63,7 @@ export default class registro extends Component {
             <Image style={{width:130,height:22}}
             source={require('../../assets/image/logoUno.png')}/>
         </View>
-        <TouchableHighlight>
-          <Text style={styles.buttonText}>INGRESAR CON GOOGLE</Text>
-        </TouchableHighlight>
+        {this.renderButtonOrLoadingGoogle()}
           <TextInput style={styles.inputBox}
          underlineColorAndroid='rgba(0,0,0,0)'
           keyboardType={'email-address'}
@@ -77,6 +88,7 @@ export default class registro extends Component {
                       placeholder="Sexo"/>
                       <Text>{this.state.error}</Text>
                       {this.renderButtonOrLoading()}
+
       </View>
 
     )
