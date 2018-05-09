@@ -294,9 +294,6 @@ const styles = StyleSheet.create({
   image: {
     width:103,
     height:19,
-  //  alignItems: 'center',
-    //justifyContent: 'center',
-  //   borderRadius:9,
   },
   redText:{
     fontSize:16,
@@ -325,37 +322,6 @@ const styles = StyleSheet.create({
     color:'#2B7B3D',
     textAlign:'center',
   },
-  mediumGreenText:{
-    fontSize:17.8,
-    color:'#2B7B3D',
-    textAlign:'center',
-    fontWeight: 'bold',
-  },
-  inputBox: {
-    width:110,
-  //  backgroundColor:'#ffff',
-    borderRadius:10,
-    textAlign:'center',
-    fontSize:19,
-    color:'#A51414',
-    marginVertical:10,
-    marginHorizontal:10,
-    borderWidth:1.286,
-    borderColor:'#A51414',
-    paddingVertical:15,
-  },
-  inputBoxDos: {
-    width:42,
-  //  backgroundColor:'#ffff',
-    borderRadius:10,
-    textAlign:'center',
-    fontSize:19,
-    color:'#A51414',
-    //marginVertical:10,
-    borderWidth:1.286,
-    borderColor:'#A51414',
-   paddingVertical:15,
-  },
   buttonText:{
     fontSize:20,
     backgroundColor:'#A51414',
@@ -366,32 +332,9 @@ const styles = StyleSheet.create({
     textAlign:'center',
     paddingVertical:9,
   },
-
-buttonSave:{
-  justifyContent: 'center',
-//  textAlign:'center',
-  borderWidth:1,
-  borderColor:'#A91414',
-  paddingVertical:10,
-},
-  navigatorBar:{
-   flexDirection:'row',
-   paddingTop: 30,
-    paddingBottom:10,
-  },
-  navigatorBottom:{
-    flex:1,
-    textAlign:'center',
-  },
-  navigatorTitle:{
-    flex:3,
-    fontSize:20,
-    fontFamily:'Roboto Medium',
-    color:'#606060',
-  },
   container: {
     flex: 2,
-    backgroundColor: '#fff',
+    backgroundColor: '#b50000',
     alignItems: 'center',
     justifyContent: 'center',
   },
@@ -421,37 +364,6 @@ buttonSave:{
     alignItems: 'center',
  justifyContent: 'center',
   },
-  containerRed: {
-    flex: 1,
-  //  backgroundColor: 'red',
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  },
-  containerRedAbajo: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-
-  //  color:'#fff',
-  },
-  containerBlueDos: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  //  backgroundColor: '#fff',
-    alignItems: 'center',
-    //width: 320,
-    //height: 60,
-    backgroundColor:'white',
-    borderRadius: 10,
-    shadowColor: '#000',
-        shadowOffset: { width: 0, height: 2 },
-        shadowOpacity: 0.8,
-    margin: 40 ,
-    padding: 10,
-    borderWidth:4,
-  },
   shadow:{
     flex: 1,
     alignItems: 'center',
@@ -475,8 +387,5 @@ buttonSave:{
     justifyContent: 'center',
     marginTop:13,
   },
-  textoRojo:{
-      fontSize:14,
-      color:'#A91414',
-  },
+
 });

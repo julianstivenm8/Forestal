@@ -162,7 +162,7 @@ export default class Muestra extends Component {
 <View  style = {styles.scrollView}>
                 {
                   this.state.names.map((item,subItem, index) => (
-                    <TouchableOpacity key = {item.id}  style = {styles.item} onPress={() => navigate('PasoUno',{user:'PasoUno'})}>
+                    <TouchableOpacity key = {item.id}  style = {styles.item} onPress={() => navigate('ExplicacionPasoUno',{user:'ExplicacionPasoUno'})}>
                       <View  style = {styles.itemTres}>
                         <View  style = {styles.itemDos}>
                           <Text style={styles.textGrayB} >{item.name}</Text>

@@ -116,7 +116,7 @@ let params = {
         this.state.pesoMedio ? Helpers.setUserMedio(this.state.userId,this.state.pesoMedio) :null
         this.state.pesoBajo ? Helpers.setUserBajo(this.state.userId,this.state.pesoBajo) :null
         this.state.pesoPorcentaje ? Helpers.setUserPorcentaje(this.state.userId,this.state.pesoPorcentaje) :null
-this.props.navigation.navigate('PasoDos');
+this.props.navigation.navigate('ExplicacionPasoDos');
       }catch(error){
         console.log(error)
       }

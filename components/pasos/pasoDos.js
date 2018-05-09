@@ -4,9 +4,7 @@ import { Font } from 'expo';
 import * as firebase from 'firebase';
 import { StackNavigator } from 'react-navigation';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-//import Icon from './icons/menu'
-import Helpers from '../../lib/helpers.js'
-//import Firebase from '../lib/firebase';
+import Helpers from '../../lib/helpers.js';
 import { Constants} from 'expo';
 
 export default class PasoDos extends React.Component {
